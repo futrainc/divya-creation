@@ -1,0 +1,3 @@
+# Paste Instagram reel links here, newest first — one per line. No token or API needed.
+# Optional caption after a "|":   https://www.instagram.com/reel/XXXXXXXXXXX/ | Ocean resin pour
+# Lines starting with # are ignored. The first 12 links are shown.

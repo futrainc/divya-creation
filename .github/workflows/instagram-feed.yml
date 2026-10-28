@@ -1,0 +1,55 @@
+name: Instagram feed (own token)
+
+# Optional. Every 6 hours pulls the latest Instagram videos via the official API into data/instagram.json
+# and commits the result, then starts a Pages deploy. Needs the repository secret INSTAGRAM_ACCESS_TOKEN
+# (see README.md). Not needed if you use the Behold feed or data/reels.txt instead.
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: instagram-feed
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      IG_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+    steps:
+      - name: Check token is configured
+        if: env.IG_TOKEN == ''
+        run: echo "::warning::INSTAGRAM_ACCESS_TOKEN secret is not set — nothing to sync. See README.md."
+
+      - uses: actions/checkout@v4
+        if: env.IG_TOKEN != ''
+
+      - uses: actions/setup-node@v4
+        if: env.IG_TOKEN != ''
+        with:
+          node-version: '20'
+
+      - name: Fetch latest videos
+        if: env.IG_TOKEN != ''
+        run: node scripts/fetch-instagram.mjs
+
+      - name: Commit changes
+        if: env.IG_TOKEN != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/instagram.json img/ig
+          if git diff --cached --quiet; then echo "Feed unchanged."; else
+            git commit -m "chore: refresh Instagram feed"
+            git push
+            # pushes made with GITHUB_TOKEN don't trigger other workflows, so start the Pages deploy explicitly
+            gh workflow run pages.yml --ref "${GITHUB_REF_NAME}"
+          fi

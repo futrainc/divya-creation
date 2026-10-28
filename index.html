@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Divya Creation — Artful Gifting, Handcrafted with Love</title>
+<meta name="description" content="Handcrafted candles, resin art, handcasting, texture, mosaic & lippan art, and bespoke gifting — made to order in Mumbai by Divya Jain. Where art meets emotion.">
+<meta name="theme-color" content="#150d0a">
+<meta property="og:title" content="Divya Creation — Where art meets emotion">
+<meta property="og:description" content="Handcrafting memories that last far beyond the moment. Candles · Resin art · Handcasting · Workshops · Bespoke gifting.">
+<meta property="og:image" content="img/c-peony.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 210'%3E%3Cpath d='M120 98 8 6l64 50-32 12 56 24zM120 98 232 6l-64 50 32 12-56 24zM120 104 60 150l36 20zM120 104l60 46-36 20z' fill='%23d81b78'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500;700&family=Great+Vibes&family=Italiana&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#story">Skip to content</a>
+
+<div class="loader" id="loader" role="status" aria-live="polite" aria-label="Loading Divya Creation">
+  <div class="ld-stage" id="ldStage">
+    <div class="trail" aria-hidden="true"><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i></div>
+    <div class="fly"><svg class="bf" viewBox="0 0 240 210" aria-hidden="true"><g class="wl"><use href="#bwing"/></g><g class="wr"><use href="#bwing" transform="translate(240 0) scale(-1 1)"/></g><circle cx="120" cy="108" r="3.4" fill="#f2c14e"/></svg></div>
+  </div>
+  <p class="ld-t">Divya <em>Creation</em></p>
+  <div class="ld-bar" aria-hidden="true"><i id="ldBar"></i></div>
+  <p class="ld-s">Spreading its wings…</p>
+</div>
+
+
+<!-- shared SVG defs: scalloped + butterfly -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="scallop" clipPathUnits="objectBoundingBox"><path id="scallopPath" d=""/></clipPath>
+    <linearGradient id="bf1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7fc0"/><stop offset="1" stop-color="#c2185b"/></linearGradient>
+    <linearGradient id="bf2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#8e1049"/><stop offset="1" stop-color="#ff4fa3"/></linearGradient>
+    <linearGradient id="bf3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb3d9"/><stop offset="1" stop-color="#e0287f"/></linearGradient>
+    <symbol id="butterfly" viewBox="0 0 240 210">
+      <g id="bwing">
+        <path d="M2 0 88 53 13 88Z" fill="url(#bf3)"/>
+        <path d="M88 53 120 108 13 88Z" fill="url(#bf2)"/>
+        <path d="M2 0 88 53 62 66Z" fill="url(#bf1)" opacity=".55"/>
+        <path d="M70 128 120 110 100 160Z" fill="url(#bf1)"/>
+        <path d="M70 128 33 153 100 160Z" fill="url(#bf3)"/>
+        <path d="M33 153 100 160 31 205Z" fill="url(#bf2)"/>
+      </g>
+      <use href="#bwing" transform="translate(240 0) scale(-1 1)"/>
+      <path d="M113 96 120 90 127 96 120 130Z" fill="#c2185b" opacity=".0"/>
+      <circle cx="120" cy="108" r="3.2" fill="#f2c14e"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="progress" aria-hidden="true"><i></i></div>
+<div class="flame-cursor" aria-hidden="true"><svg viewBox="0 0 40 60"><defs><radialGradient id="fg" cx=".5" cy=".7" r=".6"><stop offset="0" stop-color="#fff6c8"/><stop offset=".5" stop-color="#ffb347"/><stop offset="1" stop-color="#ff5a1f" stop-opacity="0"/></radialGradient></defs><path d="M20 2C28 16 36 26 34 40a14 14 0 0 1-28 0C4 28 14 22 20 2Z" fill="url(#fg)"/></svg></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Divya Creation — home">
+    <svg class="brand-bf"><use href="#butterfly"/></svg>
+    <span>Divya <em>Creation</em></span>
+  </a>
+  <nav class="links" id="links" aria-label="Primary">
+    <a href="#story">Story</a>
+    <a href="#crafts">Crafts</a>
+    <a href="#resin">Resin</a>
+    <a href="#play">Play</a>
+    <a href="#studio">Design</a>
+    <a href="#workshops">Workshops</a>
+    <a href="#reels">Reels</a>
+    <a href="#partner">Partner</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="theme" id="themeBtn" aria-label="Switch between candlelight and daylight" title="Candlelight / Daylight">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path class="sun" d="M12 4.5a1 1 0 0 1-1-1V2a1 1 0 1 1 2 0v1.5a1 1 0 0 1-1 1Zm0 17a1 1 0 0 1-1-1V19a1 1 0 1 1 2 0v1.5a1 1 0 0 1-1 1ZM4.5 12a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h1.5a1 1 0 0 1 1 1Zm17 0a1 1 0 0 1-1 1H19a1 1 0 1 1 0-2h1.5a1 1 0 0 1 1 1ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/><path class="moon" d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+    </button>
+    <a class="btn btn-sm" href="https://wa.me/919867305432" target="_blank" rel="noopener">Order on WhatsApp</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" id="hero" aria-label="Introduction">
+  <canvas class="embers" id="embers" aria-hidden="true"></canvas>
+  <div class="collage" id="collage" aria-hidden="true">
+    <img class="cl a" src="img/c-bears.webp" alt="">
+    <img class="cl b" src="img/np-4.webp" alt="">
+    <img class="cl c" src="img/t-kintsugi.webp" alt="">
+    <img class="cl d" src="img/th-3.webp" alt="">
+    <img class="cl e" src="img/cl-5.webp" alt="">
+    <img class="cl f" src="img/m-mandala.webp" alt="">
+    <img class="cl g" src="img/f-laddu.webp" alt="">
+    <img class="cl h" src="img/vm-3.webp" alt="">
+    <img class="cl i" src="img/tb-2.webp" alt="">
+    <img class="cl j" src="img/k-pink.webp" alt="">
+    <img class="cl k" src="img/c-daisy.webp" alt="">
+    <img class="cl l" src="img/tr-2.webp" alt="">
+  </div>
+  <div class="glow" id="glow" aria-hidden="true"></div>
+  <div class="veil" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <svg class="hero-bf" aria-hidden="true"><use href="#butterfly"/></svg>
+    <p class="eyebrow">Divya Creation · Mumbai</p>
+    <h1 class="display" id="heroTitle" aria-label="Where art meets emotion">
+      <span class="ln">Where art</span>
+      <span class="ln">meets <em>emotion</em></span>
+    </h1>
+    <p class="lede">Handcrafted candles, resin art &amp; bespoke gifts — made to order, one memory at a time.</p>
+    <div class="hero-cta">
+      <button class="btn btn-flame" id="lightBtn"><span class="wick" aria-hidden="true"></span><span class="t">Light the candle</span></button>
+      <a class="btn btn-ghost" href="#crafts">Explore the crafts</a>
+    </div>
+    <p class="hint" id="hint"><span class="dot"></span> Move your light across the dark — treasures are hiding</p>
+  </div>
+  <a class="scroll-cue" href="#story" aria-label="Scroll down"><i></i></a>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq"><span>Candles</span><b>✦</b><span>Resin Art</span><b>✦</b><span>Handcasting</span><b>✦</b><span>Texture Art</span><b>✦</b><span>Mosaic Art</span><b>✦</b><span>Lippan Art</span><b>✦</b><span>Trousseau Packing</span><b>✦</b><span>Workshops</span><b>✦</b>
+  <span>Candles</span><b>✦</b><span>Resin Art</span><b>✦</b><span>Handcasting</span><b>✦</b><span>Texture Art</span><b>✦</b><span>Mosaic Art</span><b>✦</b><span>Lippan Art</span><b>✦</b><span>Trousseau Packing</span><b>✦</b><span>Workshops</span><b>✦</b></div>
+</div>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="wrap story-grid">
+    <figure class="founder rv">
+      <div class="arch"><img src="img/founder.webp" alt="Divya Jain, founder of Divya Creation, holding a blue ocean resin name plate" loading="lazy"></div>
+      <svg class="orbit" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="circ" d="M100 100m-84 0a84 84 0 1 1 168 0a84 84 0 1 1-168 0"/></defs><text><textPath href="#circ" startOffset="0">made to order ✦ made with love ✦ made to last ✦ made to order ✦ made with love ✦</textPath></text></svg>
+      <figcaption>Divya Jain <span>Founder · Mumbai</span></figcaption>
+    </figure>
+    <div class="story-copy">
+      <p class="eyebrow rv">About us</p>
+      <h2 class="h2 rv">A passion that became <em>a trusted name</em></h2>
+      <p class="rv big">Creative artisan and founder of <b>Divya Creation</b>, specializing in <b>handcrafted candles, resin art, and bespoke gifting solutions.</b></p>
+      <p class="rv">What began as a passion has evolved into a trusted name for personalized, high-quality, and emotion-driven creations. With a keen eye for detail and a love for meaningful design, ideas are transformed into tangible keepsakes that celebrate life’s special moments.</p>
+      <p class="rv">Beyond product design, art and candle-making workshops for kids and adults inspire creativity and empower people to craft their own masterpieces. Every order is <b>made-to-order</b> — ensuring exclusivity and a personal touch.</p>
+      <ul class="stats rv">
+        <li><b data-count="8">0</b><span>crafts under one roof</span></li>
+        <li><b data-count="100" data-suffix="%">0</b><span>made to order</span></li>
+        <li><b>1:1</b><span>personal touch</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDING LIGHT -->
+<section class="guide" aria-labelledby="guideH">
+  <div class="wrap">
+    <div class="guide-head rv">
+      <svg class="mandala-sm" data-mandala="sm" viewBox="-100 -100 200 200" aria-hidden="true"></svg>
+      <h2 class="h2" id="guideH">Our <em>guiding</em> light</h2>
+    </div>
+    <div class="vm">
+      <article class="rv"><h3><i></i>Vision</h3><p>“To be a trusted name in handcrafted gifting, where every creation is a blend of artistry, personalization, and emotion — turning moments into timeless memories.”</p></article>
+      <article class="rv"><h3><i></i>Mission</h3><p>“To craft unique, high-quality candles, resin art, and keepsakes that reflect our clients’ stories. We aim to spread joy through thoughtful designs, sustainable practices, and personalized experiences, while inspiring creativity through engaging workshops.”</p></article>
+    </div>
+    <ol class="values">
+      <li class="rv"><span>01</span><h4>Quality first</h4><p>Premium materials &amp; fine detailing for beauty and durability.</p></li>
+      <li class="rv"><span>02</span><h4>Personalization</h4><p>Tailoring every creation to the recipient’s personality and occasion.</p></li>
+      <li class="rv"><span>03</span><h4>Creativity &amp; innovation</h4><p>Fresh ideas &amp; unique design concepts.</p></li>
+      <li class="rv"><span>04</span><h4>Customer happiness</h4><p>Memorable experiences from concept to delivery.</p></li>
+      <li class="rv"><span>05</span><h4>Sustainability</h4><p>Eco-friendly materials like soy wax &amp; mindful packaging.</p></li>
+      <li class="rv"><span>06</span><h4>Passion in every detail</h4><p>Love, care, and joy infused in every creation.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- CRAFT ATLAS (pinned horizontal scroll) -->
+<section class="atlas" id="crafts" aria-label="Our crafts">
+  <div class="atlas-pin">
+    <div class="atlas-top">
+      <p class="eyebrow">What we do</p>
+      <div class="atlas-count"><b id="atlasNum">01</b><span>/ 06</span></div>
+    </div>
+    <div class="atlas-track" id="atlasTrack">
+
+      <article class="panel" style="--tint:#f3c9d5">
+        <div class="p-copy">
+          <span class="num">01</span>
+          <h3 class="h2">Candles</h3>
+          <p><b>Handmade candles</b> are carefully crafted using natural waxes, fragrances, and wicks. Each candle is unique, adding warmth, elegance, and a personal touch to any space — they not only light up a room but also create a soothing and aesthetic ambiance.</p>
+          <div class="tags"><i>Soy wax</i><i>Bouquets</i><i>Florals</i><i>Teddies</i></div>
+        </div>
+        <div class="p-art art-candles">
+          <img class="a1 shape-arch" src="img/c-peony.webp" alt="Pink peony candle on a wooden slice" loading="lazy">
+          <img class="a2 shape-circle" src="img/c-bears.webp" alt="Rose-bear candles in pink, ivory and magenta" loading="lazy">
+          <img class="a3 shape-polaroid" src="img/c-bouquet.webp" alt="Candle bouquet wrapped in pink paper" loading="lazy">
+          <img class="a4 shape-polaroid" src="img/c-daisy.webp" alt="Daisy candles in ribbed pots" loading="lazy">
+        </div>
+      </article>
+
+      <article class="panel" style="--tint:#f6d27a">
+        <div class="p-copy">
+          <span class="num">02</span>
+          <h3 class="h2">Festive <em>candles</em></h3>
+          <p>Thoughtfully handcrafted to capture the warmth, joy, and spirit of every celebration. Beautiful colours, fragrances and intricate festive details — modaks, laddus and more — add a touch of elegance and charm. Perfect for gifting or decorating your home.</p>
+          <div class="tags"><i>Diwali</i><i>Ganpati</i><i>Rakhi</i><i>Gift boxes</i></div>
+        </div>
+        <div class="p-art art-festive">
+          <img class="a1 shape-arch" src="img/f-modak-puja.webp" alt="Yellow modak candles lit on a golden thali" loading="lazy">
+          <img class="a2 shape-circle" src="img/f-laddu.webp" alt="A lit laddu-shaped candle" loading="lazy">
+          <img class="a3 shape-polaroid" src="img/f-box.webp" alt="Festive candle gift box with a laser-cut lid" loading="lazy">
+          <img class="a4 shape-polaroid" src="img/f-modak-row.webp" alt="Lit modak candles before a Ganesh shrine" loading="lazy">
+        </div>
+      </article>
+
+      <article class="panel" style="--tint:#e6cf9a">
+        <div class="p-copy">
+          <span class="num">03</span>
+          <h3 class="h2">Hand<em>casting</em></h3>
+          <p><b>Handcasting</b> is the art of creating a detailed replica of an object, body part, or figure by making a mold and pouring a material — resin, plaster or clay — into it. It captures intricate detail with high precision, preserving the exact shape and texture.</p>
+          <blockquote>“Handcasting turns memories into art, capturing every detail in a timeless keepsake.”</blockquote>
+        </div>
+        <div class="p-art art-cast">
+          <img class="a1 shape-frame" src="img/h-trio.webp" alt="Gold-cast baby hands and feet in a white frame with a portrait" loading="lazy">
+          <img class="a2 shape-frame" src="img/h-frame.webp" alt="Gold-cast baby hand and foot framed with a name" loading="lazy">
+          <img class="a3 shape-frame" src="img/h-gold.webp" alt="Family handcasting collage in gold" loading="lazy">
+          <i class="gleam" aria-hidden="true"></i>
+        </div>
+      </article>
+
+      <article class="panel" style="--tint:#e3b99a">
+        <div class="p-copy">
+          <span class="num">04</span>
+          <h3 class="h2">Texture <em>art</em></h3>
+          <p>Texture art creates depth and dimension using tactile materials — turning surfaces into visually and physically engaging masterpieces. Gold leaf, sculpted ridges and earthy palettes made for the walls you live with.</p>
+          <div class="tags"><i>Gold leaf</i><i>Sculpted</i><i>Wall art</i></div>
+        </div>
+        <div class="p-art art-tex">
+          <img class="a1 shape-polaroid" src="img/t-arches.webp" alt="Textured arch painting in terracotta and cream" loading="lazy">
+          <img class="a2 shape-polaroid" src="img/t-waves.webp" alt="Cream texture art with flowing gold ridges" loading="lazy">
+          <img class="a3 shape-polaroid" src="img/t-kintsugi.webp" alt="Gold kintsugi-style texture panel beside a vase" loading="lazy">
+          <img class="a4 shape-polaroid" src="img/t-earth.webp" alt="Earth-tone layered texture painting" loading="lazy">
+        </div>
+      </article>
+
+      <article class="panel panel-lippan" style="--tint:#f2a6b3">
+        <div class="p-copy">
+          <span class="num">05</span>
+          <h3 class="h2">Lippan <em>art</em></h3>
+          <p><b>Lippan art</b> is a traditional Indian craft from Gujarat where mud, clay and natural materials are used to create decorative wall designs with intricate patterns — often embellished with mirrors and textures.</p>
+          <p class="mini">Drag the mandala ↻</p>
+        </div>
+        <div class="p-art art-lippan">
+          <svg class="mandala-lg" id="mandalaLg" data-mandala="lg" viewBox="-100 -100 200 200" aria-hidden="true"></svg>
+          <img class="a1 shape-wide" src="img/lippan.webp" alt="Triptych of pink and teal lippan mandala wall art with mirror work" loading="lazy">
+        </div>
+      </article>
+
+      <article class="panel" style="--tint:#f0b79a">
+        <div class="p-copy">
+          <span class="num">06</span>
+          <h3 class="h2">Bespoke <em>gifting</em></h3>
+          <p>Trousseau packing &amp; wedding hampers, festive hampers (Diwali, Rakhi, Ganpati), theme-based gift sets, and corporate &amp; bulk gifting — styled by hand, finished with flowers, pearls and gold.</p>
+          <div class="tags"><i>Trousseau</i><i>Wedding hampers</i><i>Corporate</i><i>Bulk gifting</i></div>
+        </div>
+        <div class="p-art art-gift">
+          <img class="a1 shape-arch" src="img/g-lehenga.webp" alt="Mustard embroidered outfit packed with pearls and flowers" loading="lazy">
+          <img class="a2 shape-arch" src="img/g-shrinathji.webp" alt="Shrinathji-themed hamper in orange with lotuses" loading="lazy">
+          <img class="a3 shape-circle" src="img/g-trays.webp" alt="Rows of floral trousseau trays in pink and gold" loading="lazy">
+        </div>
+      </article>
+    </div>
+    <div class="atlas-bar" aria-hidden="true"><i id="atlasBar"></i></div>
+  </div>
+</section>
+
+<!-- RESIN -->
+<section class="resin" id="resin">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">Resin art</p>
+      <h2 class="h2 rv">Where resin becomes <em>timeless beauty</em></h2>
+      <p class="rv lede2">Coasters, clocks, frames, floral preservations, keychains, name plates and tables — every piece customizable in size, colour and finish.</p>
+    </div>
+    <div class="chips rv" id="chips" role="tablist" aria-label="Resin art categories"></div>
+    <p class="cat-note" id="catNote"></p>
+    <div class="masonry" id="masonry"></div>
+  </div>
+</section>
+
+<!-- PLAY: pour -->
+<section class="play" id="play">
+  <div class="wrap play-grid">
+    <div class="play-copy">
+      <p class="eyebrow rv">How we do resin art</p>
+      <h2 class="h2 rv">Pour your <em>own</em> coaster</h2>
+      <p class="rv">Press and drag across the resin to pour. Pick a palette, sprinkle gold flakes, and watch the colours marble — a tiny taste of the studio.</p>
+      <div class="swatches rv" id="swatches" role="radiogroup" aria-label="Resin palette"></div>
+      <div class="play-actions rv">
+        <button class="btn btn-sm" id="pourAuto">Pour for me</button>
+        <button class="btn btn-sm btn-ghost" id="pourFlakes" aria-pressed="true">Gold flakes: on</button>
+        <button class="btn btn-sm btn-ghost" id="pourClear">Clear</button>
+      </div>
+    </div>
+    <div class="coaster rv" id="coaster">
+      <canvas id="pour" width="900" height="900" aria-label="Interactive resin pouring canvas"></canvas>
+      <span class="coaster-hint" id="pourHint">drag to pour</span>
+    </div>
+  </div>
+</section>
+
+<!-- MOSAIC -->
+<section class="mosaic" id="mosaic">
+  <div class="wrap mosaic-grid">
+    <div class="mosaic-stage rv">
+      <canvas id="tess" width="720" height="720" aria-label="Interactive mosaic — move your pointer over the tiles"></canvas>
+    </div>
+    <div class="mosaic-copy">
+      <p class="eyebrow rv">Mosaic art</p>
+      <h2 class="h2 rv">Piece by <em>piece</em></h2>
+      <p class="rv"><b>Mosaic art</b> is a form of visual art where small pieces of material — coloured glass, stone, tiles or ceramics — are arranged and fixed together to create patterns, images or designs. These small pieces, called <i>tesserae</i>, are carefully placed to form intricate pictures or decorative surfaces.</p>
+      <p class="rv mini">Sweep your pointer over the tiles to scatter them — they always find their way home.</p>
+      <div class="pick rv" id="tessPick"></div>
+      <button class="btn btn-sm rv" id="tessReplay">Shatter &amp; rebuild</button>
+    </div>
+  </div>
+</section>
+
+<!-- STUDIO: nameplate designer -->
+<section class="studio" id="studio">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">Design studio</p>
+      <h2 class="h2 rv">Design your <em>name plate</em></h2>
+      <p class="rv lede2">Preview a handcrafted resin name plate with your own words, then send it straight to Divya on WhatsApp.</p>
+    </div>
+    <div class="studio-grid">
+      <div class="preview rv"><svg id="plate" viewBox="0 0 640 440" role="img" aria-label="Live preview of your resin name plate"></svg></div>
+      <form class="controls rv" id="plateForm" autocomplete="off">
+        <label>Line one<input id="tName" maxlength="26" value="Aarav &amp; Meera"></label>
+        <label>Line two <small>(house no. / date / blessing)</small><input id="tSub" maxlength="22" value="Flat 1204"></label>
+        <fieldset><legend>Lettering</legend>
+          <div class="opts" id="oFont"></div></fieldset>
+        <fieldset><legend>Finish</legend>
+          <div class="opts" id="oFinish"></div></fieldset>
+        <fieldset><legend>Shape</legend>
+          <div class="opts" id="oShape"></div></fieldset>
+        <label class="check"><input type="checkbox" id="tStones" checked> Crushed-stone corners</label>
+        <a class="btn" id="plateSend" href="#" target="_blank" rel="noopener">Send this design on WhatsApp</a>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- WORKSHOPS -->
+<section class="workshops" id="workshops">
+  <div class="wrap">
+    <div class="ws-photos">
+      <figure class="shape-scallop rv"><img src="img/w-1.webp" alt="Divya presenting at a corporate workshop" loading="lazy"></figure>
+      <figure class="shape-scallop big rv"><img src="img/w-2.webp" alt="Pouring blue resin into moulds at a workshop" loading="lazy"></figure>
+      <figure class="shape-scallop rv"><img src="img/w-3.webp" alt="Kids and adults gathered around a candle workshop" loading="lazy"></figure>
+    </div>
+    <div class="ws-copy">
+      <p class="eyebrow rv">Workshops</p>
+      <h2 class="h2 rv">Make, craft and <em>cherish</em> your own masterpieces</h2>
+      <p class="rv lede2">Hands-on experiences to learn and create unique art pieces. Explore your creativity, gain new skills, and transform ideas into tangible creations — for corporates and all age groups.</p>
+      <div class="topics rv"><span>Texture Art</span><span>Mosaic Art</span><span>Lippan Art</span><span>Candle making</span><span>Resin Art</span></div>
+      <ul class="ws-for rv">
+        <li>Schools &amp; colleges</li><li>Corporate HR &amp; event teams</li><li>Societies &amp; clubhouses</li><li>Kitty-party organisers</li><li>Art-café pop-ups</li><li>Moms’ groups &amp; communities</li>
+      </ul>
+      <a class="btn rv" href="#contact">Book a workshop</a>
+    </div>
+  </div>
+</section>
+
+<!-- REELS -->
+<section class="reels" id="reels" aria-labelledby="reelsH">
+  <div class="wrap reels-head">
+    <div>
+      <p class="eyebrow rv">On Instagram</p>
+      <h2 class="h2 rv" id="reelsH">Watch it <em>happen</em></h2>
+      <p class="rv lede2">Pours, wicks, gold leaf and unboxings — the making of every piece lives in reels on <b>@divyascreationn</b>. Tap a frame to watch.</p>
+    </div>
+    <div class="reels-cta rv">
+      <a class="btn" id="igFollow" href="https://www.instagram.com/divyascreationn/" target="_blank" rel="noopener"><span class="ig-dot" aria-hidden="true"></span>Follow @divyascreationn</a>
+      <div class="rail-btns"><button type="button" id="reelPrev" aria-label="Previous reel">‹</button><button type="button" id="reelNext" aria-label="Next reel">›</button></div>
+    </div>
+  </div>
+  <div class="film" aria-label="Reels from the studio">
+    <div class="reel-rail" id="reelRail" tabindex="0"></div>
+  </div>
+  <p class="wrap reel-note" id="reelNote"></p>
+</section>
+
+<!-- PARTNER -->
+<section class="partner" id="partner">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">Partner with us</p>
+      <h2 class="h2 rv">Crafted <em>for</em> the people who gift</h2>
+    </div>
+    <div class="ptabs rv" id="ptabs" role="tablist"></div>
+    <div class="ppanel" id="ppanel" role="tabpanel" aria-live="polite"></div>
+
+    <div class="circle rv">
+      <p class="eyebrow">In good company</p>
+      <p class="circle-sub">Businesses in our referral circle</p>
+      <ul>
+        <li>Fyntres Partners</li><li>Navy Children School, Karanja</li><li>UpSpace</li><li>Plus Marketing</li><li>Safal Fintech</li><li>Mahavir Aluminium</li><li>Metalman</li><li>Pure One Aquaguard</li><li>Kamal Associates</li><li>ReraVista</li><li>Swastik Gold</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-copy">
+      <svg class="contact-bf rv" aria-hidden="true"><use href="#butterfly"/></svg>
+      <p class="eyebrow rv">Contact us</p>
+      <h2 class="h2 rv">Let’s craft <em>something</em> that lasts</h2>
+      <p class="rv big">“Handcrafting memories that last far beyond the moment.”</p>
+      <ul class="reach rv">
+        <li><a href="https://wa.me/919867305432" target="_blank" rel="noopener"><span class="ic wa">W</span> 98673 05432</a></li>
+        <li><a href="https://instagram.com/divyascreationn" target="_blank" rel="noopener"><span class="ic ig">◎</span> @divyascreationn</a></li>
+        <li><span class="ic fb">f</span> Divya Creation</li>
+        <li><a href="mailto:divyascreationn@gmail.com"><span class="ic gm">M</span> divyascreationn@gmail.com</a></li>
+      </ul>
+    </div>
+    <form class="enquiry rv" id="enquiry">
+      <h3>Start an enquiry</h3>
+      <label>Your name<input name="n" required placeholder="Priya"></label>
+      <label>I’m interested in
+        <select name="c">
+          <option>Resin art</option><option>Candles</option><option>Handcasting</option><option>Trousseau packing &amp; gifting</option><option>Corporate / bulk gifting</option><option>A workshop</option><option>Texture / Mosaic / Lippan art</option>
+        </select></label>
+      <label>Occasion<input name="o" placeholder="Wedding, Diwali, housewarming…"></label>
+      <label>Tell us more<textarea name="m" rows="3" placeholder="Colours, names, quantity, date needed…"></textarea></label>
+      <button class="btn" type="submit">Prepare my message</button>
+      <a class="btn btn-ghost" id="enqLink" href="#" target="_blank" rel="noopener" hidden>Open WhatsApp with your message</a>
+      <p class="fine">Your message is prepared for WhatsApp. Every order is made-to-order.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-brand"><svg><use href="#butterfly"/></svg><div><b>Divya Creation</b><span>Artful Gifting. Handcrafted with Love.</span></div></div>
+    <p>Where art meets emotion · Founder Divya Jain · Mumbai</p>
+    <a href="#top" class="totop">Back to the light ↑</a>
+  </div>
+</footer>
+
+<!-- REEL THEATER (Instagram embed) -->
+<div class="theater" id="theater" hidden role="dialog" aria-modal="true" aria-label="Instagram reel player">
+  <button class="th-x" id="thX" type="button" aria-label="Close player">×</button>
+  <button class="th-p" id="thP" type="button" aria-label="Previous reel">‹</button>
+  <div class="th-stage">
+    <div class="th-phone"><div class="th-loading" id="thLoad"><svg class="bf" viewBox="0 0 240 210" aria-hidden="true"><g class="wl"><use href="#bwing"/></g><g class="wr"><use href="#bwing" transform="translate(240 0) scale(-1 1)"/></g></svg><span>Bringing the reel to life…</span></div><iframe id="thFrame" title="Instagram reel" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="origin"></iframe></div>
+    <p class="th-cap"><b id="thCap"></b><a id="thOpen" href="#" target="_blank" rel="noopener">Open on Instagram ↗</a></p>
+    <p class="th-fail" id="thFail" hidden>The player didn’t load here. Open it on Instagram instead.</p>
+  </div>
+  <button class="th-n" id="thN" type="button" aria-label="Next reel">›</button>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-x" id="lbX" aria-label="Close">×</button>
+  <button class="lb-p" id="lbP" aria-label="Previous">‹</button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="lb-n" id="lbN" aria-label="Next">›</button>
+</div>
+
+<script src="js/mandala.js" defer></script>
+<script src="js/pour.js" defer></script>
+<script src="js/mosaic.js" defer></script>
+<script src="js/studio.js" defer></script>
+<script src="js/reels.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
