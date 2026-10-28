@@ -496,3 +496,8 @@ fieldset{border:0}
 .ld-s{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:#b8a899;margin:0}
 /* small butterfly in the reel player */
 .th-loading .bf{width:74px;height:65px;filter:drop-shadow(0 0 16px rgba(224,38,127,.6))}
+
+.foot .credit{margin-top:26px;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem;letter-spacing:.04em}
+.foot .credit a{text-decoration:none;color:var(--muted);transition:color .3s}
+.foot .credit a b{font-weight:500;color:var(--ink);border-bottom:1px solid var(--gold)}
+.foot .credit a:hover,.foot .credit a:hover b{color:var(--accent)}
