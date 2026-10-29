@@ -1,5 +1,7 @@
 # Divya Creation — website
 
+**Live: https://divyascreation.com** (Cloudflare Pages, domain DNS on Cloudflare). Backup: https://futrainc.github.io/divya-creation/
+
 Static, build-free site (HTML + CSS + vanilla JS) made from the *Divya Jain* brand deck.
 Open `index.html` through any static host (or `python3 -m http.server` in this folder).
 
@@ -17,6 +19,11 @@ Live address: **https://futrainc.github.io/divya-creation/**
 
 One-time setup (repo admin): **Settings → Pages → Build and deployment → Source: GitHub Actions**. The repository must be public for Pages on a free GitHub plan.
 The optional Instagram token job starts a new deploy after it commits fresh reels.
+
+## Production hosting (Cloudflare Pages, Git-connected)
+Cloudflare builds this repo on every push to `main`. Project settings: framework preset *None*, build command `bash build.sh`, output directory `_site`.
+`build.sh` copies only the public files (page, `robots.txt`, `sitemap.xml`, `_headers`, `css/`, `js/`, `img/`, `data/`). Custom domain: `divyascreation.com`.
+The SEO tags in `index.html` (canonical, Open Graph/Twitter, JSON-LD) and `sitemap.xml` use that domain; the share image is `img/og-image.jpg`.
 
 ## Cloudflare Pages (optional second host, custom domain)
 `.github/workflows/cloudflare-pages.yml` deploys the same site to Cloudflare Pages on every push to `main`. It does nothing until these exist:
