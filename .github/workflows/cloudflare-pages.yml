@@ -1,0 +1,59 @@
+name: Deploy to Cloudflare Pages
+
+# Optional second home for the site (e.g. https://divya-creation.pages.dev or a custom domain).
+# Needs two repository secrets: CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID (see README.md).
+# Optional repository variable CF_PAGES_PROJECT sets the Pages project name (default: divya-creation).
+# Without the secrets this workflow only prints a notice and does nothing.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cloudflare-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CF_PROJECT: ${{ vars.CF_PAGES_PROJECT || 'divya-creation' }}
+    steps:
+      - name: Check Cloudflare credentials
+        if: env.CF_TOKEN == '' || env.CF_ACCOUNT == ''
+        run: echo "::notice::CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID not set — skipping Cloudflare deploy. See README.md."
+
+      - uses: actions/checkout@v4
+        if: env.CF_TOKEN != '' && env.CF_ACCOUNT != ''
+
+      - name: Assemble site
+        if: env.CF_TOKEN != '' && env.CF_ACCOUNT != ''
+        run: |
+          mkdir _site
+          cp -r . _site/ 2>/dev/null || true
+          rm -rf _site/_site _site/.git _site/.github _site/scripts _site/README.md
+          test -f _site/index.html
+          echo "Site files: $(find _site -type f | wc -l)"
+
+      - name: Create Pages project if it does not exist yet
+        if: env.CF_TOKEN != '' && env.CF_ACCOUNT != ''
+        uses: cloudflare/wrangler-action@v3
+        continue-on-error: true
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages project create ${{ env.CF_PROJECT }} --production-branch=main
+
+      - name: Deploy
+        if: env.CF_TOKEN != '' && env.CF_ACCOUNT != ''
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy _site --project-name=${{ env.CF_PROJECT }} --branch=main --commit-dirty=true

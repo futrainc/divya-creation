@@ -52,4 +52,5 @@ jobs:
             git push
             # pushes made with GITHUB_TOKEN don't trigger other workflows, so start the Pages deploy explicitly
             gh workflow run pages.yml --ref "${GITHUB_REF_NAME}"
+            gh workflow run cloudflare-pages.yml --ref "${GITHUB_REF_NAME}" || true
           fi

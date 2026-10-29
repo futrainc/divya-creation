@@ -18,6 +18,18 @@ Live address: **https://futrainc.github.io/divya-creation/**
 One-time setup (repo admin): **Settings → Pages → Build and deployment → Source: GitHub Actions**. The repository must be public for Pages on a free GitHub plan.
 The optional Instagram token job starts a new deploy after it commits fresh reels.
 
+## Cloudflare Pages (optional second host, custom domain)
+`.github/workflows/cloudflare-pages.yml` deploys the same site to Cloudflare Pages on every push to `main`. It does nothing until these exist:
+1. A free Cloudflare account. Create an **API token**: My Profile → API Tokens → Create Token → template *Edit Cloudflare Workers* is too broad;
+   use a custom token with **Account → Cloudflare Pages → Edit**. Copy the token and your **Account ID** (Workers & Pages → right sidebar).
+2. In GitHub: repo → Settings → Secrets and variables → Actions → add secrets **`CLOUDFLARE_API_TOKEN`** and **`CLOUDFLARE_ACCOUNT_ID`**
+   (optional repository variable `CF_PAGES_PROJECT`, default `divya-creation`).
+3. Run the workflow once (Actions → *Deploy to Cloudflare Pages* → Run workflow). The first run creates the project; the site appears at
+   `https://divya-creation.pages.dev` (the exact name is shown in Workers & Pages).
+4. Custom domain: Workers & Pages → the project → **Custom domains → Set up a domain**. If the domain's DNS is already on Cloudflare this is one click;
+   otherwise add the domain to Cloudflare first (change its nameservers at the registrar).
+`_headers` sets safe default headers and asset caching on Cloudflare. GitHub Pages keeps working in parallel; turn it off in Settings → Pages once Cloudflare is the main host.
+
 ## Instagram reels — hosted widget (Behold), no code or API of your own
 The reel strip can load a live JSON feed from a hosted service, so new reels appear automatically with no commits.
 1. The owner of `@divyascreationn` signs up at behold.so (a free plan exists — check current limits), connects the Instagram account
